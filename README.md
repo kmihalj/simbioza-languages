@@ -1,14 +1,23 @@
 # Simbioza language packs
 
+[Croatian version](README_hr.md)
+
 This repository is the public catalogue of Simbioza interface translations. The
 application ships with Croatian (`hr`) and English (`en`); additional languages
 can be installed from the catalogue without installing a PHP module.
+Croatian UI text in Simbioza's code is the canonical key in every pack.
+`source_locale` records the reference language used while translating values:
+English can be used for German, French, Spanish, or Italian. Runtime lookup is
+always direct from the Croatian key to the selected locale, not a translation
+chain through English.
+Technical identifiers such as permission codes (`can_view`) and locale-format
+settings remain stable IDs; they are not user-facing source sentences.
 
-English, Croatian, and German are currently published. French, Spanish, and
-Italian have starter packs with multilingual names and SVG flags in `drafts/`;
-their interface text is not yet translated, so they are deliberately **not**
-offered for installation. A complete key count alone does not mean that a
-translation is ready.
+Croatian, English, German, French, Spanish, and Italian are published. Every
+pack includes multilingual names and an SVG flag. The French, Spanish, and
+Italian text is AI-generated and may contain wording errors; please report
+corrections. Published status confirms structural completeness, not native-
+speaker review.
 
 Each `packs/<locale>.json` file is a version-2 Simbioza language pack. The
 `manifest.json` file lists the published packs and their SHA-256 digests. A
@@ -17,8 +26,10 @@ marked `released`. Work-in-progress translations remain in `drafts/` and are
 never offered as complete translations.
 
 The translations in this repository were prepared with AI assistance,
-including ChatGPT/Codex. They require review by native speakers, particularly
-for security messages, accessibility text, and administrative terminology.
+including a ChatGPT/Codex-guided workflow and Argos Translate for the initial
+French, Spanish, and Italian drafts. They have not been certified by native
+speakers, particularly for security messages, accessibility text, and
+administrative terminology.
 Please report mistakes through an issue or a pull request. Do not translate
 placeholder tokens such as `:name`, `%s`, `%d`, or `{{value}}`.
 
@@ -32,21 +43,22 @@ vendor/bin/hph languages validate /path/to/simbioza-languages/drafts/fr.json
 Fill the translated values, native and multilingual names, and a safe SVG flag.
 After review and validation, move the file to `packs/` and publish its digest in
 `manifest.json`. The repository tool can do the final verification and publish
-step for a reviewed pack:
+step for a structurally complete pack:
 
 ```sh
-php scripts/publish.php /path/to/Simbioza fr --version=2026.09.22.2
+php scripts/publish.php /path/to/Simbioza fr --version=2026.09.22.4
 php scripts/validate_catalog.php
 ```
 
 When Simbioza or a module adds or changes strings, extract only the delta:
 
 ```sh
-php scripts/sync.php /path/to/Simbioza --version=2026.09.22.2
+php scripts/sync.php /path/to/Simbioza --version=2026.09.22.4
 ```
 
-This updates the built-in source packs and writes only new or changed source
-keys to `pending/<locale>.json`; it never overwrites a translation. Translate
+This updates the built-in Croatian and English reference packs and writes only
+new or changed keys or reference values to `pending/<locale>.json` according to
+each pack's `source_locale`; it never overwrites a translation. Translate
 and review those keys in the corresponding pack, remove its pending file after
 review, validate, then publish a newer pack revision. Installed repository
 packs are refreshed during a later application update when their published
@@ -60,14 +72,3 @@ stored timestamps and machine-readable values keep their stable formats.
 Simbioza accepts UTF-8 text and BCP-47-like locale identifiers, so Cyrillic
 languages such as `ru` or `sr-cyrl` can be packaged in the same way. A flag is
 only a selector icon, not a claim that every speaker belongs to one country.
-
-## Croatian
-
-Ovaj repozitorij sadrži jezične pakete Simbioze. Zadani jezici su hrvatski i
-engleski; objavljen je i njemački. Francuski, španjolski i talijanski zasad su
-samo nacrti s nazivima i SVG zastavicama, ali bez prevedenog sučelja. Prijevodi
-su pripremljeni uz pomoć umjetne inteligencije, uključujući ChatGPT/Codex, i
-trebaju pregled izvornih govornika. Nedovršeni paketi u `drafts/` ne nude se
-za instalaciju. Naredba `scripts/sync.php` izdvaja samo nove i promijenjene
-ključeve; postojeće prijevode ne prepisuje. Datumi i vremena u sučelju
-prilagođavaju se odabranom jeziku.

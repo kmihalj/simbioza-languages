@@ -2,16 +2,39 @@ name: Validate language catalogue
 
 on:
   push:
+    branches:
+      - main
+    tags:
+      - '*'
   pull_request:
+
+permissions:
+  contents: read
 
 jobs:
   validate:
+    name: PHP ${{ matrix.php }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.2', '8.5']
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: shivammathur/setup-php@v2
+      - name: Check out catalogue
+        uses: actions/checkout@v5
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'
-          extensions: dom, mbstring
-      - run: php -l scripts/build_catalog.php && php -l scripts/sync.php && php -l scripts/validate_catalog.php
-      - run: php scripts/validate_catalog.php
+          php-version: ${{ matrix.php }}
+          extensions: json, mbstring
+
+      - name: Check PHP syntax
+        run: |
+          for script in scripts/*.php; do
+            php -l "$script"
+          done
+
+      - name: Verify all released packs
+        run: php scripts/validate_catalog.php

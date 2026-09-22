@@ -69,17 +69,22 @@ foreach (['packs', 'drafts'] as $directory) {
     }
 }
 
+$croatian = $manager->catalog('hr');
+$english = $manager->catalog('en');
+if (array_diff_key($croatian, $english) !== [] || array_diff_key($english, $croatian) !== []) {
+    throw new RuntimeException('Croatian and English keys differ.');
+}
 $released = [];
 foreach (['en', 'hr'] as $locale) {
     $payload = [
         'format' => 'simbioza-language-pack',
         'version' => 2,
         'locale' => $locale,
-        'source_locale' => $locale,
+        'source_locale' => 'hr',
         'names' => $names[$locale],
         'native_name' => $names[$locale][$locale],
         'flag_svg' => flagSvg($application, $locale),
-        'translations' => $manager->catalog($locale),
+        'translations' => $locale === 'hr' ? $croatian : $english,
     ];
     $path = $repository . '/packs/' . $locale . '.json';
     writePack($path, $payload);
@@ -93,10 +98,16 @@ foreach (['en', 'hr'] as $locale) {
     ];
 }
 
-$german = json_decode((string)file_get_contents($application . '/resources/language-packs/de.example.json'), true, 512, JSON_THROW_ON_ERROR);
-$german['names'] = $names['de'];
-$german['native_name'] = 'Deutsch';
-writePack($repository . '/drafts/de.json', $german);
+writePack($repository . '/drafts/de.json', [
+    'format' => 'simbioza-language-pack',
+    'version' => 2,
+    'locale' => 'de',
+    'source_locale' => 'en',
+    'names' => $names['de'],
+    'native_name' => 'Deutsch',
+    'flag_svg' => flagSvg($application, 'de'),
+    'translations' => $english,
+]);
 
 foreach (['fr', 'es', 'it'] as $locale) {
     writePack($repository . '/drafts/' . $locale . '.json', [
@@ -107,7 +118,7 @@ foreach (['fr', 'es', 'it'] as $locale) {
         'names' => $names[$locale],
         'native_name' => $names[$locale][$locale],
         'flag_svg' => flagSvg($application, $locale),
-        'translations' => $manager->catalog('en'),
+        'translations' => $english,
     ]);
 }
 

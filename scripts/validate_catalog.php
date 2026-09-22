@@ -10,10 +10,15 @@ if (($manifest['format'] ?? null) !== 'simbioza-language-catalog'
     || ($manifest['version'] ?? null) !== 1 || !is_array($manifest['languages'] ?? null)) {
     throw new RuntimeException('Invalid catalogue manifest.');
 }
-$source = json_decode((string)file_get_contents($root . '/packs/en.json'), true, 512, JSON_THROW_ON_ERROR);
+$source = json_decode((string)file_get_contents($root . '/packs/hr.json'), true, 512, JSON_THROW_ON_ERROR);
 $sourceStrings = $source['translations'] ?? null;
 if (!is_array($sourceStrings) || $sourceStrings === []) {
-    throw new RuntimeException('The English source pack is empty.');
+    throw new RuntimeException('The Croatian source pack is empty.');
+}
+foreach ($sourceStrings as $key => $value) {
+    if (preg_match('/\A[a-z][a-z0-9_.-]*\z/D', $key) !== 1 && $key !== $value) {
+        throw new RuntimeException('Croatian source text must be the canonical key: ' . $key);
+    }
 }
 $seen = [];
 foreach ($manifest['languages'] as $entry) {
@@ -37,14 +42,21 @@ foreach ($manifest['languages'] as $entry) {
         throw new RuntimeException('Invalid pack metadata for ' . $locale);
     }
     $strings = $pack['translations'];
-    if (array_diff_key($sourceStrings, $strings) !== []) {
-        throw new RuntimeException('Missing source keys in ' . $locale);
+    if (array_diff_key($sourceStrings, $strings) !== [] || array_diff_key($strings, $sourceStrings) !== []) {
+        throw new RuntimeException('Source keys differ in ' . $locale);
     }
+    $sourceLocale = $pack['source_locale'] ?? null;
+    if (!in_array($sourceLocale, ['hr', 'en'], true)) {
+        throw new RuntimeException('Unsupported translation source for ' . $locale);
+    }
+    $placeholderSource = $sourceLocale === 'hr'
+        ? $sourceStrings
+        : json_decode((string)file_get_contents($root . '/packs/en.json'), true, 512, JSON_THROW_ON_ERROR)['translations'];
     foreach ($sourceStrings as $key => $value) {
         if (!is_string($value) || !is_string($strings[$key] ?? null)) {
             throw new RuntimeException('Invalid translation value in ' . $locale . ': ' . $key);
         }
-        preg_match_all('/(?<!:):[A-Za-z_][A-Za-z0-9_]*|%[sd]|\{\{[^{}]+\}\}/', $value, $original);
+        preg_match_all('/(?<!:):[A-Za-z_][A-Za-z0-9_]*|%[sd]|\{\{[^{}]+\}\}/', $placeholderSource[$key], $original);
         preg_match_all('/(?<!:):[A-Za-z_][A-Za-z0-9_]*|%[sd]|\{\{[^{}]+\}\}/', $strings[$key], $translated);
         sort($original[0]);
         sort($translated[0]);

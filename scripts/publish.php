@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-// HR: Objavljuje samo ručno pregledan i potpun paket s novom revizijom.
-// EN: Publishes only a manually reviewed, complete pack with a new revision.
+// HR: Objavljuje strukturno potpun paket bez neriješenih novih ključeva.
+// EN: Publishes a structurally complete pack without unresolved new keys.
 $application = realpath($argv[1] ?? '');
 $locale = $argv[2] ?? '';
 $version = '';
