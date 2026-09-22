@@ -1,0 +1,30 @@
+{
+    "format": "simbioza-language-catalog",
+    "version": 1,
+    "languages": [
+        {
+            "locale": "de",
+            "native_name": "Deutsch",
+            "version": "2026.09.22.1",
+            "file": "packs/de.json",
+            "sha256": "d7bc7e4ab95df892f496cb74f8975e64b9591fdeb3e52d0fba3837b045da63b3",
+            "status": "released"
+        },
+        {
+            "locale": "en",
+            "native_name": "English",
+            "version": "2026.09.22.1",
+            "file": "packs/en.json",
+            "sha256": "a209c081d58e4c3f599cdb47eb137dc17f2e7750fb8837804fbd658b237d14f6",
+            "status": "released"
+        },
+        {
+            "locale": "hr",
+            "native_name": "Hrvatski",
+            "version": "2026.09.22.1",
+            "file": "packs/hr.json",
+            "sha256": "76860638968d0f5d7465cb0f78c2cb7b8948d34b1590018e3e9dc9f2e0ff723f",
+            "status": "released"
+        }
+    ]
+}
