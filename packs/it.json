@@ -4190,6 +4190,22 @@
         "Što znače načini dostave?": "Cosa significano le modalità di consegna?",
         "Šuma": "Foresta",
         "Želiš li obrisati ovaj događaj?": "Vuoi eliminare questo evento?",
-        "Želiš li obrisati ovaj kalendar?": "Vuoi eliminare questo calendario?"
+        "Želiš li obrisati ovaj kalendar?": "Vuoi eliminare questo calendario?",
+        "Dostupni jezici": "Lingue disponibili",
+        "Instalacija jezika kroz CLI": "Installare le lingue tramite CLI",
+        "Instaliraj odabrane jezike": "Installa le lingue selezionate",
+        "Instalirani jezici": "Lingue installate",
+        "Instalirano je %d jezičnih paketa.": "Sono stati installati %d pacchetti lingua.",
+        "Jezici za instalaciju": "Lingue da installare",
+        "Nema instaliranih jezika.": "Non sono installate lingue.",
+        "Nema jezika koji odgovaraju pretrazi.": "Nessuna lingua corrisponde alla ricerca.",
+        "Objavljeni jezici iz javnog repozitorija Simbioze. Odaberite jedan ili više jezika za zajedničku instalaciju.": "Lingue pubblicate nel repository pubblico di Simbioza. Seleziona una o più lingue da installare insieme.",
+        "Odaberi prikazane": "Seleziona quelle visibili",
+        "Odaberite barem jedan dostupan jezik.": "Seleziona almeno una lingua disponibile.",
+        "Odaberite jezike": "Seleziona le lingue",
+        "Odabrano jezika: %d": "Lingue selezionate: %d",
+        "Poništi odabir": "Cancella selezione",
+        "Pretraži dostupne jezike": "Cerca tra le lingue disponibili",
+        "Svi dostupni jezici već su instalirani.": "Tutte le lingue disponibili sono già installate."
     }
 }
