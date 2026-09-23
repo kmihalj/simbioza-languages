@@ -43,7 +43,7 @@ Prevedite vrijednosti, upišite naziv jezika na više jezika i dodajte sigurnu
 SVG zastavicu. Nakon pregleda i provjere objavite paket:
 
 ```sh
-php scripts/publish.php /putanja/do/Simbioze fr --version=2026.09.22.4
+php scripts/publish.php /putanja/do/Simbioze fr --version=2026.09.23.4
 php scripts/validate_catalog.php
 ```
 
@@ -51,7 +51,7 @@ Kada se u Simbiozi ili modulu dodaju ili promijene stringovi, izdvojite samo
 razliku:
 
 ```sh
-php scripts/sync.php /putanja/do/Simbioze --version=2026.09.22.4
+php scripts/sync.php /putanja/do/Simbioze --version=2026.09.23.4
 ```
 
 Alat osvježava hrvatski i engleski referentni paket, a u `pending/<jezik>.json`
@@ -64,7 +64,13 @@ osvježava se pri sljedećoj nadogradnji aplikacije ako je objavljen novi sažet
 
 Manifest je podatkovna, a ne izvršna datoteka. Svaki objavljeni paket mora
 sadržavati sigurnu SVG zastavicu, nazive jezika, sve izvorne ključeve i
-nepromijenjene zamjenske oznake. Datumi i vremena vidljivi korisniku slijede
+nepromijenjene zamjenske oznake.
+`translation_exceptions.json` je pregledani popis tehničkih izraza, naziva
+proizvoda, naredbi i riječi koje se doista jednako pišu u izvornom i ciljnom
+jeziku. Provjera odbija svaku drugu nepromijenjenu izvornu vrijednost, kao i
+zastarjele iznimke, pa postotak koji broji ključeve više ne može skrivati
+neprevedeni tekst sučelja.
+Datumi i vremena vidljivi korisniku slijede
 odabrani jezik prema ICU pravilima; pohranjeni i strojno čitljivi zapisi ostaju
 stabilni.
 

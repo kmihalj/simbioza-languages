@@ -46,14 +46,14 @@ After review and validation, move the file to `packs/` and publish its digest in
 step for a structurally complete pack:
 
 ```sh
-php scripts/publish.php /path/to/Simbioza fr --version=2026.09.22.4
+php scripts/publish.php /path/to/Simbioza fr --version=2026.09.23.4
 php scripts/validate_catalog.php
 ```
 
 When Simbioza or a module adds or changes strings, extract only the delta:
 
 ```sh
-php scripts/sync.php /path/to/Simbioza --version=2026.09.22.4
+php scripts/sync.php /path/to/Simbioza --version=2026.09.23.4
 ```
 
 This updates the built-in Croatian and English reference packs and writes only
@@ -66,6 +66,11 @@ digest changes; `vendor/bin/hph languages update` can refresh them sooner.
 
 The manifest is data, not executable code. Every published pack must have a
 safe SVG flag, language names, all source keys, and intact placeholders.
+`translation_exceptions.json` is the reviewed allowlist for technical terms,
+product names, commands, and words that are genuinely written the same way in
+the source and target languages. Validation rejects every other unchanged
+source value and also rejects stale allowlist entries, so key-count coverage
+can no longer hide untranslated interface text.
 User-facing dates and times follow the selected locale through ICU, while
 stored timestamps and machine-readable values keep their stable formats.
 

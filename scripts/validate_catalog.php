@@ -20,6 +20,18 @@ foreach ($sourceStrings as $key => $value) {
         throw new RuntimeException('Croatian source text must be the canonical key: ' . $key);
     }
 }
+$exceptionPayload = json_decode(
+    (string)file_get_contents($root . '/translation_exceptions.json'),
+    true,
+    512,
+    JSON_THROW_ON_ERROR,
+);
+if (($exceptionPayload['format'] ?? null) !== 'simbioza-translation-exceptions'
+    || ($exceptionPayload['version'] ?? null) !== 1
+    || !is_array($exceptionPayload['locales'] ?? null)
+    || !is_array($exceptionPayload['forbidden_tokens'] ?? null)) {
+    throw new RuntimeException('Invalid translation exception registry.');
+}
 $seen = [];
 foreach ($manifest['languages'] as $entry) {
     $locale = $entry['locale'] ?? null;
@@ -52,6 +64,13 @@ foreach ($manifest['languages'] as $entry) {
     $placeholderSource = $sourceLocale === 'hr'
         ? $sourceStrings
         : json_decode((string)file_get_contents($root . '/packs/en.json'), true, 512, JSON_THROW_ON_ERROR)['translations'];
+    $translationExceptions = $exceptionPayload['locales'][$locale] ?? [];
+    if (!is_array($translationExceptions)
+        || array_filter($translationExceptions, static fn(mixed $key): bool => !is_string($key)) !== []) {
+        throw new RuntimeException('Invalid translation exceptions for ' . $locale);
+    }
+    $translationExceptions = array_fill_keys($translationExceptions, true);
+    $translationExceptionKeys = $translationExceptions;
     foreach ($sourceStrings as $key => $value) {
         if (!is_string($value) || !is_string($strings[$key] ?? null)) {
             throw new RuntimeException('Invalid translation value in ' . $locale . ': ' . $key);
@@ -62,6 +81,43 @@ foreach ($manifest['languages'] as $entry) {
         sort($translated[0]);
         if ($original[0] !== $translated[0]) {
             throw new RuntimeException('Placeholder mismatch in ' . $locale . ': ' . $key);
+        }
+        if ($locale !== $sourceLocale && $strings[$key] === $placeholderSource[$key]) {
+            if (!isset($translationExceptions[$key])) {
+                throw new RuntimeException('Untranslated source value in ' . $locale . ': ' . $key);
+            }
+            unset($translationExceptions[$key]);
+        }
+    }
+    if ($translationExceptions !== []) {
+        throw new RuntimeException(
+            'Stale or unknown translation exceptions in ' . $locale . ': '
+            . implode(', ', array_slice(array_keys($translationExceptions), 0, 10)),
+        );
+    }
+    $forbiddenTokens = $exceptionPayload['forbidden_tokens'][$locale] ?? [];
+    if (!is_array($forbiddenTokens)
+        || array_filter($forbiddenTokens, static fn(mixed $token): bool => !is_string($token) || $token === '') !== []) {
+        throw new RuntimeException('Invalid forbidden-token registry for ' . $locale);
+    }
+    foreach ($strings as $key => $translated) {
+        if (isset($translationExceptionKeys[$key])) {
+            continue;
+        }
+        $visibleTranslation = preg_replace(
+            '/`[^`]*`|https?:\/\/\S+|\{\{?[^{}]+\}?\}/u',
+            '',
+            $translated,
+        ) ?? $translated;
+        foreach ($forbiddenTokens as $token) {
+            if (preg_match(
+                '/(?<![\p{L}\p{N}_])' . preg_quote($token, '/') . '(?![\p{L}\p{N}_])/u',
+                $visibleTranslation,
+            ) === 1) {
+                throw new RuntimeException(
+                    sprintf('Untranslated source token "%s" in %s: %s', $token, $locale, $key),
+                );
+            }
         }
     }
     $svg = $pack['flag_svg'] ?? null;

@@ -1,0 +1,77 @@
+{
+  "format": "simbioza-translation-exceptions",
+  "version": 1,
+  "description": "Keys whose translated value is intentionally identical to its source value.",
+  "forbidden_tokens": {
+    "de": ["Workspace", "Workspaces", "Theme", "Setup", "Community", "Workflow", "Homepage"],
+    "fr": ["Workspace", "Workspaces", "Theme", "Links", "Editor", "editor", "User", "user", "settings", "display-options", "page-label", "owner-removal", "checksum", "Navbar", "hover", "Hero"],
+    "es": ["Workspace", "Workspaces", "Theme", "Failed", "subprofiles", "ACL-visible", "Admin override", "Subquery", "settings", "autoload file", "draft vista"],
+    "it": ["Workspace", "Workspaces", "Theme", "Inherited", "Personal", "Green", "Red", "ACL-visible", "homepage", "page-label", "owner-removal", "display-options", "Invalid", "Setup", "Search", "target"]
+  },
+  "locales": {
+    "de": [
+      "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
+      "Admin", "Administrator", "CAS", "CalDAV", "Dabar", "Detalj", "Detalji", "Editor", "Kolovoz", "Logotip",
+      "Navigacija", "Naziv", "Normalno", "Opcionalan", "Osoba", "Položaj: ", "Poveznica",
+      "OAuth2", "OIDC", "Pozicija", "Revizija", "Rujan", "Ruta", "SAML", "Seminar", "Simbioza", "Srce - sup", "Standardna",
+      "SimpleSAML auth_source", "Sistemski", "Stanje", "Studeni", "Tab", "Tekst", "Timski",
+      "Travanj", "U redu", "URL", "Uploadi", "Verzija", "Vodoravno", "Webhookovi",
+      "hph auth <install|help> [arguments] [--options]",
+      "hph calendar <install|help> [argumenti] [--opcije]",
+      "hph editor-html <install|help> [arguments] [--options]",
+      "hph editor-html <install|storage:worker|storage:migrate|storage:status|storage:reset|help>",
+      "hph orm-migrate <up|rollback|status|make> [argumenti] [--opcije]",
+      "saml-proxy", "starttls"
+    ],
+    "en": [
+      "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
+      "Admin", "Administrator", "Auth setup", "Authorization endpoint", "Badge",
+      "Batch import: {name} ({current} / {total})", "Boolean", "Brand", "CalDAV", "CalDAV URL",
+      "Caption", "CAS", "Client ID", "Client secret", "Confluence import", "Dabar", "E-mail", "Editor", "Email", "End-session endpoint",
+      "Format", "Framework", "HTML editor", "Hero", "Host", "ID", "Info", "Local",
+      "Login endpoint", "Logout endpoint", "Model not found: ",
+      "Model not found: invalid model class ", "Monospace", "Outbox worker", "Port", "Provider",
+      "OAuth2", "OIDC", "Query", "SAML", "SMTP host", "SMTP timeout (s)", "Seminar", "Simbioza", "Srce - sup",
+      "Simbioza by HeartPhrame", "SimpleSAML auth_source", "SimpleSAML autoload_path", "Site",
+      "Slug", "Tab", "Tag", "Token endpoint", "URL", "Userinfo endpoint", "Validate endpoint",
+      "YouTube video", "hph auth <install|help> [arguments] [--options]",
+      "hph editor-html <install|help> [arguments] [--options]",
+      "hph editor-html <install|storage:worker|storage:migrate|storage:status|storage:reset|help>",
+      "saml-proxy", "starttls"
+    ],
+    "es": [
+      "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
+      "Boja", "CAS", "CalDAV", "Dabar", "Editor", "Greška", "ID", "Local", "Ne", "Normalno", "OAuth2", "OIDC", "Okomito",
+      "Osobni", "Pogreška", "SAML", "Simbioza", "Slug", "U redu", "URL", "Ukupno",
+      "Srce - sup", "Vodoravno", "Webhookovi", "hph auth <install|help> [arguments] [--options]",
+      "hph calendar <install|help> [argumenti] [--opcije]",
+      "hph editor-html <install|help> [arguments] [--options]",
+      "hph editor-html <install|storage:worker|storage:migrate|storage:status|storage:reset|help>",
+      "hph orm-migrate <up|rollback|status|make> [argumenti] [--opcije]", "saml-proxy", "starttls"
+    ],
+    "fr": [
+      "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
+      "Administracija", "Akcent", "Akcije", "Aplikacija", "CAS", "CalDAV", "Dabar", "Datum", "Dokumenti", "E-mail",
+      "Format", "Izbornik", "Izbornici", "Javno", "Kompaktno", "Local", "Logotip", "Meni", "Modul",
+      "Moduli", "Najviše", "Navigacija", "Normalno", "Obavijesti", "Odsustvo", "Ograničenja",
+      "OAuth2", "OIDC", "Okomito", "Opasnost", "Orijentacija", "Položaj", "Port", "Poruka", "Radnje",
+      "Roditelj", "SAML", "Simbioza", "Site", "Srce - sup", "Standardna", "Stranica", "Stranice", "Tip", "URL",
+      "Verzija", "Vrsta", "Webhookovi", "hph auth <install|help> [arguments] [--options]",
+      "hph calendar <install|help> [argumenti] [--opcije]",
+      "hph editor-html <install|help> [arguments] [--options]",
+      "hph editor-html <install|storage:worker|storage:migrate|storage:status|storage:reset|help>",
+      "hph orm-migrate <up|rollback|status|make> [argumenti] [--opcije]", "opis", "public",
+      "saml-proxy", "starttls"
+    ],
+    "it": [
+      "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
+      "CAS", "CalDAV", "Dabar", "Datoteka", "E-mail", "E-pošta", "Editor", "Email", "Host", "ID", "Izbornik",
+      "Logotip", "Lozinka", "Mediji", "Meni", "OAuth2", "OIDC", "SAML", "Simbioza", "Srce - sup", "Standardna",
+      "hph auth <install|help> [arguments] [--options]",
+      "hph calendar <install|help> [argumenti] [--opcije]",
+      "hph editor-html <install|help> [arguments] [--options]",
+      "hph editor-html <install|storage:worker|storage:migrate|storage:status|storage:reset|help>",
+      "hph orm-migrate <up|rollback|status|make> [argumenti] [--opcije]", "saml-proxy"
+    ]
+  }
+}
