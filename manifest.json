@@ -5,49 +5,49 @@
         {
             "locale": "de",
             "native_name": "Deutsch",
-            "version": "2026.09.23.4",
+            "version": "2026.09.23.5",
             "file": "packs/de.json",
-            "sha256": "bab7387217bda3e9d2207a78b13266d43b5555f5a861f9da174a398d778f86bd",
+            "sha256": "cad22f1df658ab47e6db954874ab2440b3b0843806246ad65fb02912e149d327",
             "status": "released"
         },
         {
             "locale": "en",
             "native_name": "English",
-            "version": "2026.09.23.4",
+            "version": "2026.09.23.5",
             "file": "packs/en.json",
-            "sha256": "97e5030bf944600c63a2864868b0baf83f417a9057b557fe2b0ecced8043b42e",
+            "sha256": "86583f34f4751f9cabf5b45d8e0a62cd79b5ffbf444eb8bef4015be8254746e2",
             "status": "released"
         },
         {
             "locale": "es",
             "native_name": "español",
-            "version": "2026.09.23.4",
+            "version": "2026.09.23.5",
             "file": "packs/es.json",
-            "sha256": "805384e4f99e6971c6f7f6cc24bcb383b443396626979d2cc64f0e19b7a01d7f",
+            "sha256": "19ad70f9c5c3953245682abfd6f529c061411e6889cf83347f4a4288438d9811",
             "status": "released"
         },
         {
             "locale": "fr",
             "native_name": "français",
-            "version": "2026.09.23.4",
+            "version": "2026.09.23.5",
             "file": "packs/fr.json",
-            "sha256": "fc425d915eb09a569c328ee2f4335edb08fac6fd3c5a5386ca45aa244dadda76",
+            "sha256": "b86d4854e53286f273dc6a7ea925aeafcb71a6bd822248a748ece1ee62b487cd",
             "status": "released"
         },
         {
             "locale": "hr",
             "native_name": "Hrvatski",
-            "version": "2026.09.23.4",
+            "version": "2026.09.23.5",
             "file": "packs/hr.json",
-            "sha256": "6cf169821368fca761d52fb4083176c9b47407d145a0c0ce898e6a8a769730eb",
+            "sha256": "d6c095a6f04affb7fff46f5fe7c40a70ddda4c15c9474be402911a1522a14840",
             "status": "released"
         },
         {
             "locale": "it",
             "native_name": "italiano",
-            "version": "2026.09.23.4",
+            "version": "2026.09.23.5",
             "file": "packs/it.json",
-            "sha256": "eca4cc34dbd6830f409045bad362b7aa246171af9a308d5ae29db166f00d32e1",
+            "sha256": "09da0ee08bce5740f68329a75c532572cb7e4f93daf93e9c9debc804bb854f1c",
             "status": "released"
         }
     ]

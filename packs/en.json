@@ -926,6 +926,8 @@
         "Jezik sortiranja nije ispravan.": "The sorting locale is invalid.",
         "Jezik uvezenog sadržaja": "Imported content language",
         "Jezična verzija dokumenta nije pronađena.": "The document language version was not found.",
+        "Jezični paket je instaliran.": "The language pack has been installed.",
+        "Jezični paket je uklonjen.": "The language pack has been removed.",
         "Još ne pratite nijednu stranicu, područje, kalendar ili listu zadataka.": "You do not follow any page, workspace, calendar, or task list yet.",
         "Još nema Confluence import poslova.": "There are no Confluence import jobs yet.",
         "Još nema backup poslova.": "No backup jobs yet.",
