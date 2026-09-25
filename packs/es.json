@@ -14,6 +14,10 @@
     "native_name": "español",
     "flag_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 24\"><rect x=\"0\" y=\"0\" width=\"32\" height=\"6\" fill=\"#aa151b\"/><rect x=\"0\" y=\"6\" width=\"32\" height=\"12\" fill=\"#f1bf00\"/><rect x=\"0\" y=\"18\" width=\"32\" height=\"6\" fill=\"#aa151b\"/></svg>",
     "translations": {
+        "Uredi alternativni tekst slike": "Editar el texto alternativo de la imagen",
+        "Označi sliku kao ukrasnu": "Marcar la imagen como decorativa",
+        "Odaberite sliku.": "Seleccione una imagen.",
+        "Ćelija tablice upućuje na neispravno zaglavlje.": "Una celda de la tabla hace referencia a una celda de encabezado no válida.",
         " (%d promjena)": " (Cambios de %d)",
         " Događaji: %d dodano, %d ažurirano, %d preskočeno.": " Eventos: %d añadido, %d actualizado, %d saltado.",
         "%d od %d": "%d de %d",
