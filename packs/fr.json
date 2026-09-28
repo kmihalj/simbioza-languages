@@ -14,6 +14,8 @@
     "native_name": "français",
     "flag_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 24\"><rect x=\"0\" y=\"0\" width=\"11\" height=\"24\" fill=\"#0055a4\"/><rect x=\"11\" y=\"0\" width=\"11\" height=\"24\" fill=\"#ffffff\"/><rect x=\"22\" y=\"0\" width=\"11\" height=\"24\" fill=\"#ef4135\"/></svg>",
     "translations": {
+        "Predložak migracije trajnog brisanja nije pronađen.": "Le modèle de migration pour la suppression définitive est introuvable.",
+        "Kreirana je migracija trajnog brisanja područja: ": "Migration de suppression définitive de l’espace créée : ",
         "Spremanje nije uspjelo jer je drugi urednik promijenio nacrt.": "L’enregistrement a échoué car une autre personne a modifié le brouillon.",
         "U editoru je aktualni nacrt. Vaše izmjene su sačuvane; usporedite ih prije vraćanja.": "L’éditeur affiche le brouillon actuel. Vos modifications sont conservées ; comparez-les avant de les restaurer.",
         "Usporedi verzije": "Comparer les versions",

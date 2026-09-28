@@ -14,6 +14,8 @@
     "native_name": "italiano",
     "flag_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 24\"><rect x=\"0\" y=\"0\" width=\"11\" height=\"24\" fill=\"#009246\"/><rect x=\"11\" y=\"0\" width=\"11\" height=\"24\" fill=\"#ffffff\"/><rect x=\"22\" y=\"0\" width=\"11\" height=\"24\" fill=\"#ce2b37\"/></svg>",
     "translations": {
+        "Predložak migracije trajnog brisanja nije pronađen.": "Il modello di migrazione per l'eliminazione definitiva non è stato trovato.",
+        "Kreirana je migracija trajnog brisanja područja: ": "Migrazione per l'eliminazione definitiva dello spazio creata: ",
         "Spremanje nije uspjelo jer je drugi urednik promijenio nacrt.": "Il salvataggio non è riuscito perché un'altra persona ha modificato la bozza.",
         "U editoru je aktualni nacrt. Vaše izmjene su sačuvane; usporedite ih prije vraćanja.": "L'editor mostra la bozza corrente. Le tue modifiche sono state conservate; confrontale prima di ripristinarle.",
         "Usporedi verzije": "Confronta le versioni",
