@@ -4175,6 +4175,7 @@
         "ZIP sadrži samostalne HTML stranice, trenutačnu temu, filtrirano stablo, privitke i statičke snimke kalendara i zadataka.": "Le ZIP contient des pages HTML autonomes, le thème actuel, un arbre filtré, des pièces jointes et des instantanés statiques du calendrier et des tâches.",
         "ZIP simboličke poveznice nisu dopuštene.": "Les liens symboliques ZIP ne sont pas autorisés.",
         "ZIP zapis nije moguće pročitati.": "L'entrée ZIP n'a pas pu être lue.",
+        "Za Confluence import potreban je PHP memory_limit od najmanje %d MB.": "L’import Confluence nécessite un memory_limit PHP d’au moins %d Mo.",
         "Za atribute tipa \"Pripadnost grupi\" možeš povezati očekivanu vrijednost ili regex s grupom. Prazna vrijednost je dopuštena i neće rušiti test profila.": "Pour les attributs \"adhésion de groupe\", vous pouvez connecter une valeur attendue ou un régex à un groupe. Une valeur vide est autorisée et ne brisera pas les tests de profil.",
         "Za brisanje događaja potrebna je prijava.": "Vous devez vous connecter pour supprimer un événement.",
         "Za brisanje nesistemske grupe isprazni naziv i spremi.": "Pour supprimer un groupe non-système, effacer son nom et enregistrer.",
