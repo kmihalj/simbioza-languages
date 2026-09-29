@@ -14,6 +14,9 @@
     "native_name": "italiano",
     "flag_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 24\"><rect x=\"0\" y=\"0\" width=\"11\" height=\"24\" fill=\"#009246\"/><rect x=\"11\" y=\"0\" width=\"11\" height=\"24\" fill=\"#ffffff\"/><rect x=\"22\" y=\"0\" width=\"11\" height=\"24\" fill=\"#ce2b37\"/></svg>",
     "translations": {
+        "Sadržaj, sve jezične verzije i privitci uvijek se prenose. Povijest i prava možete uključiti zasebno.": "Il contenuto, tutte le versioni linguistiche e gli allegati vengono sempre trasferiti. La cronologia delle versioni e le autorizzazioni possono essere incluse separatamente.",
+        "Ova stranica ima podređene stavke. Kopira se samo odabrana stranica; premještanje nije dostupno dok postoje podređene stavke.": "Questa pagina contiene elementi secondari. Viene copiata solo la pagina selezionata; lo spostamento non è disponibile finché sono presenti elementi secondari.",
+        "Prava se prenose samo za korisnike i grupe koji postoje na ciljnom sustavu.": "Le autorizzazioni vengono trasferite solo per gli utenti e i gruppi presenti nel sistema di destinazione.",
         "Predložak migracije trajnog brisanja nije pronađen.": "Il modello di migrazione per l'eliminazione definitiva non è stato trovato.",
         "Kreirana je migracija trajnog brisanja područja: ": "Migrazione per l'eliminazione definitiva dello spazio creata: ",
         "Spremanje nije uspjelo jer je drugi urednik promijenio nacrt.": "Il salvataggio non è riuscito perché un'altra persona ha modificato la bozza.",

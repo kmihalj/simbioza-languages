@@ -14,6 +14,9 @@
     "native_name": "français",
     "flag_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 24\"><rect x=\"0\" y=\"0\" width=\"11\" height=\"24\" fill=\"#0055a4\"/><rect x=\"11\" y=\"0\" width=\"11\" height=\"24\" fill=\"#ffffff\"/><rect x=\"22\" y=\"0\" width=\"11\" height=\"24\" fill=\"#ef4135\"/></svg>",
     "translations": {
+        "Sadržaj, sve jezične verzije i privitci uvijek se prenose. Povijest i prava možete uključiti zasebno.": "Le contenu, toutes les versions linguistiques et les pièces jointes sont toujours transférés. L’historique des versions et les autorisations peuvent être inclus séparément.",
+        "Ova stranica ima podređene stavke. Kopira se samo odabrana stranica; premještanje nije dostupno dok postoje podređene stavke.": "Cette page comporte des éléments enfants. Seule la page sélectionnée est copiée ; le déplacement n’est pas disponible tant que des éléments enfants existent.",
+        "Prava se prenose samo za korisnike i grupe koji postoje na ciljnom sustavu.": "Les autorisations sont transférées uniquement pour les utilisateurs et les groupes qui existent dans le système cible.",
         "Predložak migracije trajnog brisanja nije pronađen.": "Le modèle de migration pour la suppression définitive est introuvable.",
         "Kreirana je migracija trajnog brisanja područja: ": "Migration de suppression définitive de l’espace créée : ",
         "Spremanje nije uspjelo jer je drugi urednik promijenio nacrt.": "L’enregistrement a échoué car une autre personne a modifié le brouillon.",
