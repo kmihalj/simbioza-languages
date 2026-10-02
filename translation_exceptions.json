@@ -10,6 +10,7 @@
   },
   "locales": {
     "de": [
+      "2 ×",
       "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
       "Admin", "Administrator", "Atkinson Hyperlegible Next", "CAS", "CalDAV", "Dabar", "Detalj", "Detalji", "Editor", "Kolovoz", "Lexend", "Logotip",
       "Navigacija", "Naziv", "Normalno", "Opcionalan", "Osoba", "Položaj: ", "Poveznica",
@@ -24,6 +25,7 @@
       "saml-proxy", "starttls"
     ],
     "en": [
+      "2 ×",
       "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
       "Admin", "Administrator", "Atkinson Hyperlegible Next", "Auth setup", "Authorization endpoint", "Badge",
       "Batch import: {name} ({current} / {total})", "Boolean", "Brand", "CalDAV", "CalDAV URL",
@@ -40,6 +42,7 @@
       "saml-proxy", "starttls"
     ],
     "es": [
+      "2 ×",
       "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
       "Atkinson Hyperlegible Next", "Boja", "CAS", "CalDAV", "Dabar", "Editor", "Greška", "ID", "Lexend", "Local", "Ne", "Normalno", "Noto Sans", "OAuth2", "OIDC", "Okomito", "OpenDyslexic",
       "Osobni", "Pogreška", "SAML", "Simbioza", "Slug", "U redu", "URL", "Ukupno",
@@ -50,6 +53,7 @@
       "hph orm-migrate <up|rollback|status|make> [argumenti] [--opcije]", "saml-proxy", "starttls"
     ],
     "fr": [
+      "2 ×",
       "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
       "Administracija", "Akcent", "Akcije", "Animacije", "Aplikacija", "Atkinson Hyperlegible Next", "CAS", "CalDAV", "Dabar", "Datum", "Dokumenti", "E-mail",
       "Format", "Izbornik", "Izbornici", "Javno", "Kompaktno", "Lexend", "Local", "Logotip", "Meni", "Modul",
@@ -64,6 +68,7 @@
       "saml-proxy", "starttls"
     ],
     "it": [
+      "2 ×",
       "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
       "Atkinson Hyperlegible Next", "CAS", "CalDAV", "Dabar", "Datoteka", "E-mail", "E-pošta", "Editor", "Email", "Host", "ID", "Izbornik", "Lexend",
       "Logotip", "Lozinka", "Mediji", "Meni", "Noto Sans", "OAuth2", "OIDC", "OpenDyslexic", "SAML", "Simbioza", "Srce - sup", "Standardna",
