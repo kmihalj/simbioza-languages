@@ -38,3 +38,9 @@ jobs:
 
       - name: Verify all released packs
         run: php scripts/validate_catalog.php
+
+      - name: Verify compatibility with the published Simbioza baseline
+        run: |
+          git clone --quiet --depth 1 --branch 0.3.0 https://github.com/kmihalj/Simbioza.git "$RUNNER_TEMP/simbioza-language-source"
+          composer --working-dir="$RUNNER_TEMP/simbioza-language-source" update --no-interaction --no-progress --prefer-dist
+          php scripts/validate_source.php "$RUNNER_TEMP/simbioza-language-source"

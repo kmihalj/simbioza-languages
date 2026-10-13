@@ -10,6 +10,7 @@
   },
   "locales": {
     "de": [
+      "S256 PKCE (0/1)", "Status",
       "2 ×",
       "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
       "Admin", "Administrator", "Atkinson Hyperlegible Next", "CAS", "CalDAV", "Dabar", "Detalj", "Detalji", "Editor", "Kolovoz", "Lexend", "Logotip",
@@ -25,6 +26,7 @@
       "saml-proxy", "starttls"
     ],
     "en": [
+      "JWKS URL", "S256 PKCE (0/1)", "Status",
       "2 ×",
       "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
       "Admin", "Administrator", "Atkinson Hyperlegible Next", "Auth setup", "Authorization endpoint", "Badge",
@@ -42,6 +44,7 @@
       "saml-proxy", "starttls"
     ],
     "es": [
+      "S256 PKCE (0/1)", "Skripta",
       "2 ×",
       "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
       "Atkinson Hyperlegible Next", "Boja", "CAS", "CalDAV", "Dabar", "Editor", "Greška", "ID", "Lexend", "Local", "Ne", "Normalno", "Noto Sans", "OAuth2", "OIDC", "Okomito", "OpenDyslexic",
@@ -53,6 +56,7 @@
       "hph orm-migrate <up|rollback|status|make> [argumenti] [--opcije]", "saml-proxy", "starttls"
     ],
     "fr": [
+      "S256 PKCE (0/1)", "Skripta",
       "2 ×",
       "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
       "Administracija", "Akcent", "Akcije", "Animacije", "Aplikacija", "Atkinson Hyperlegible Next", "CAS", "CalDAV", "Dabar", "Datum", "Dokumenti", "E-mail",
@@ -68,6 +72,7 @@
       "saml-proxy", "starttls"
     ],
     "it": [
+      "S256 PKCE (0/1)", "Skripta",
       "2 ×",
       "%s: %s", "AAI", "AAI@EduHR", "AAI@EduHR OAuth2", "AAI@EduHR OIDC", "AAI@EduHr",
       "Atkinson Hyperlegible Next", "CAS", "CalDAV", "Dabar", "Datoteka", "E-mail", "E-pošta", "Editor", "Email", "Host", "ID", "Izbornik", "Lexend",

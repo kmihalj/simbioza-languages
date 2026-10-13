@@ -2,6 +2,11 @@
 
 [Engleska verzija](README.md)
 
+Paketi 2026.10.13.1 uključuju sva 4554 ključa Simbioze 0.3.0 i njezinih tagiranih
+modula, uključujući sigurnost SSO-a, odobravanje skripti i nadogradnju imagea.
+CI pakete provjerava i prema preuzetoj aplikaciji 0.3.0, ne samo prema sažecima
+kataloga. Tagovi repozitorija ne zamjenjuju neovisne revizije jezičnih paketa.
+
 Ovaj je repozitorij javni katalog prijevoda sučelja Simbioze. Aplikacija dolazi
 s hrvatskim (`hr`) i engleskim (`en`), a dodatni se jezici mogu instalirati iz
 kataloga bez instaliranja PHP modula.

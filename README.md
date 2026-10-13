@@ -2,6 +2,11 @@
 
 [Croatian version](README_hr.md)
 
+The 2026.10.13.1 packs include all 4554 keys required by Simbioza 0.3.0 and its
+tagged modules, including SSO security, script approval and image-based updates.
+CI also validates packs against a downloaded 0.3.0 application, not just the
+catalogue hashes. Repository tags do not replace the independent pack revisions.
+
 This repository is the public catalogue of Simbioza interface translations. The
 application ships with Croatian (`hr`) and English (`en`); additional languages
 can be installed from the catalogue without installing a PHP module.
