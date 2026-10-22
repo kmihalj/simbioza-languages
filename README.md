@@ -2,10 +2,12 @@
 
 [Croatian version](README_hr.md)
 
-The 2026.10.13.1 packs include all 4554 keys required by Simbioza 0.3.0 and its
-tagged modules, including SSO security, script approval and image-based updates.
-CI also validates packs against a downloaded 0.3.0 application, not just the
-catalogue hashes. Repository tags do not replace the independent pack revisions.
+The **2026.10.22.1** packs include all **4578 keys** required by Simbioza
+**0.3.16** and its published modules. Each of the six languages adds 24 keys for
+language-package status, button text colors, log pagination and the Email
+worker's message limit. Existing translations, language names and flags are
+preserved. CI validates packs against a downloaded 0.3.16 application, not just
+the catalogue hashes. Repository tags do not replace the independent pack revisions.
 
 This repository is the public catalogue of Simbioza interface translations. The
 application ships with Croatian (`hr`) and English (`en`); additional languages
@@ -51,16 +53,17 @@ After review and validation, move the file to `packs/` and publish its digest in
 step for a structurally complete pack:
 
 ```sh
-php scripts/publish.php /path/to/Simbioza fr --version=2026.09.23.4
+php scripts/publish.php /path/to/Simbioza fr --version=2026.10.22.2
 php scripts/validate_catalog.php
 ```
 
 When Simbioza or a module adds or changes strings, extract only the delta:
 
 ```sh
-php scripts/sync.php /path/to/Simbioza --version=2026.09.23.4
+php scripts/sync.php /path/to/Simbioza --version=2026.10.22.2
 ```
 
+Choose a revision newer than the published one; the date above is an example.
 This updates the built-in Croatian and English reference packs and writes only
 new or changed keys or reference values to `pending/<locale>.json` according to
 each pack's `source_locale`; it never overwrites a translation. Translate
@@ -78,6 +81,27 @@ source value and also rejects stale allowlist entries, so key-count coverage
 can no longer hide untranslated interface text.
 User-facing dates and times follow the selected locale through ICU, while
 stored timestamps and machine-readable values keep their stable formats.
+
+## Updating an installed language
+
+Translation-only updates do **not** require a new Simbioza or PHP-module release.
+In Setup's Languages section, check for language updates and update the installed
+packs. Where GUI language installation is unavailable, run these commands from
+the application root with its configured PHP CLI and an account permitted to
+update its runtime language data:
+
+```sh
+vendor/bin/hph languages available --refresh
+vendor/bin/hph languages update
+vendor/bin/hph languages list
+```
+
+The update refreshes previously installed repository/bundled packs and preserves
+their enabled/disabled state; it does not install every language in the catalogue.
+Keep the same `HPH_CONFIG_PATH` and override layers as the web application. For
+secured FPM, use the configured application runtime identity, not a shared Apache
+account or an unrelated deployment. Review manual translations separately before
+using `languages install <locale> --replace`, because replacement overwrites them.
 
 Simbioza accepts UTF-8 text and BCP-47-like locale identifiers, so Cyrillic
 languages such as `ru` or `sr-cyrl` can be packaged in the same way. A flag is

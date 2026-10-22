@@ -2,10 +2,12 @@
 
 [Engleska verzija](README.md)
 
-Paketi 2026.10.13.1 uključuju sva 4554 ključa Simbioze 0.3.0 i njezinih tagiranih
-modula, uključujući sigurnost SSO-a, odobravanje skripti i nadogradnju imagea.
-CI pakete provjerava i prema preuzetoj aplikaciji 0.3.0, ne samo prema sažecima
-kataloga. Tagovi repozitorija ne zamjenjuju neovisne revizije jezičnih paketa.
+Paketi **2026.10.22.1** uključuju svih **4578 ključeva** Simbioze **0.3.16** i
+njezinih objavljenih modula. Svih šest jezika dobiva 24 ključa za stanje
+jezičnih paketa, boje teksta gumba, paginaciju logova i limit poruka Email
+workera. Postojeći prijevodi, nazivi jezika i zastavice su očuvani. CI pakete
+provjerava prema preuzetoj aplikaciji 0.3.16, ne samo prema sažecima kataloga.
+Tagovi repozitorija ne zamjenjuju neovisne revizije jezičnih paketa.
 
 Ovaj je repozitorij javni katalog prijevoda sučelja Simbioze. Aplikacija dolazi
 s hrvatskim (`hr`) i engleskim (`en`), a dodatni se jezici mogu instalirati iz
@@ -48,7 +50,7 @@ Prevedite vrijednosti, upišite naziv jezika na više jezika i dodajte sigurnu
 SVG zastavicu. Nakon pregleda i provjere objavite paket:
 
 ```sh
-php scripts/publish.php /putanja/do/Simbioze fr --version=2026.09.23.4
+php scripts/publish.php /putanja/do/Simbioze fr --version=2026.10.22.2
 php scripts/validate_catalog.php
 ```
 
@@ -56,9 +58,10 @@ Kada se u Simbiozi ili modulu dodaju ili promijene stringovi, izdvojite samo
 razliku:
 
 ```sh
-php scripts/sync.php /putanja/do/Simbioze --version=2026.09.23.4
+php scripts/sync.php /putanja/do/Simbioze --version=2026.10.22.2
 ```
 
+Odaberite reviziju noviju od objavljene; datum iz primjera samo je ogledni.
 Alat osvježava hrvatski i engleski referentni paket, a u `pending/<jezik>.json`
 zapisuje samo nove ili promijenjene ključeve odnosno vrijednosti predloška
 prema `source_locale` pojedinog paketa. Postojeće prijevode ne
@@ -78,6 +81,27 @@ neprevedeni tekst sučelja.
 Datumi i vremena vidljivi korisniku slijede
 odabrani jezik prema ICU pravilima; pohranjeni i strojno čitljivi zapisi ostaju
 stabilni.
+
+## Nadogradnja instaliranog jezika
+
+Nadogradnja samo prijevoda **ne zahtijeva** novo izdanje Simbioze ni PHP modula.
+U odjeljku Jezici u Setupu provjerite nadogradnje jezika i nadogradite instalirane
+pakete. Ako GUI instalacija jezika nije dostupna, iz korijena aplikacije pokrenite
+sljedeće naredbe njezinim podešenim PHP CLI-jem i računom koji smije ažurirati
+njezine izvršne jezične podatke:
+
+```sh
+vendor/bin/hph languages available --refresh
+vendor/bin/hph languages update
+vendor/bin/hph languages list
+```
+
+Nadogradnja osvježava ranije instalirane pakete repozitorija i ugrađene pakete te
+čuva njihovo stanje uključenosti; ne instalira sve jezike iz kataloga. Koristite
+isti `HPH_CONFIG_PATH` i nadjačavajuće slojeve kao web aplikacija. Za secured FPM
+koristite podešeni izvršni identitet aplikacije, ne zajednički Apache račun ni
+drugu instalaciju. Ručne prijevode pregledajte zasebno prije naredbe
+`languages install <jezik> --replace`, jer ih zamjena prepisuje.
 
 Simbioza prihvaća UTF-8 tekst i jezične oznake nalik BCP 47, pa se mogu
 pakirati i jezici na ćirilici poput `ru` ili `sr-cyrl`. Zastavica je samo ikona
