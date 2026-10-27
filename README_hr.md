@@ -2,12 +2,11 @@
 
 [Engleska verzija](README.md)
 
-Paketi **2026.10.22.1** uključuju svih **4578 ključeva** Simbioze **0.3.16** i
-njezinih objavljenih modula. Svih šest jezika dobiva 24 ključa za stanje
-jezičnih paketa, boje teksta gumba, paginaciju logova i limit poruka Email
-workera. Postojeći prijevodi, nazivi jezika i zastavice su očuvani. CI pakete
-provjerava prema preuzetoj aplikaciji 0.3.16, ne samo prema sažecima kataloga.
-Tagovi repozitorija ne zamjenjuju neovisne revizije jezičnih paketa.
+Paketi **2026.10.27.1** uključuju **4607 ključeva** za Simbiozu **0.3.18** i
+njezine objavljene module, uključujući ovlasti anketa i opise sigurnosnih kopija.
+Postojeći prijevodi, stari ključevi, nazivi jezika i zastavice su očuvani. CI
+provjerava i kompatibilnost s objavljenom aplikacijom 0.3.17, ne samo sažetke
+kataloga. Tagovi repozitorija ne zamjenjuju neovisne revizije jezičnih paketa.
 
 Ovaj je repozitorij javni katalog prijevoda sučelja Simbioze. Aplikacija dolazi
 s hrvatskim (`hr`) i engleskim (`en`), a dodatni se jezici mogu instalirati iz
@@ -69,6 +68,10 @@ prepisuje. Prevedite i pregledajte te ključeve, uklonite pending datoteku nakon
 pregleda, provjerite paket i objavite novu reviziju. Instalirani paket
 osvježava se pri sljedećoj nadogradnji aplikacije ako je objavljen novi sažetak;
 `vendor/bin/hph languages update` provjerava odmah.
+
+Ako su izvorni ključevi uklonjeni, pregledajte ih prije sinkronizacije.
+Opciju `--retain-removed` koristite samo za zadržavanje pregledanih starih
+prijevoda potrebnih podržanim starijim instalacijama; alat ispisuje sve takve ključeve.
 
 Manifest je podatkovna, a ne izvršna datoteka. Svaki objavljeni paket mora
 sadržavati sigurnu SVG zastavicu, nazive jezika, sve izvorne ključeve i

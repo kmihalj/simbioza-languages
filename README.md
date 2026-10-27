@@ -2,11 +2,10 @@
 
 [Croatian version](README_hr.md)
 
-The **2026.10.22.1** packs include all **4578 keys** required by Simbioza
-**0.3.16** and its published modules. Each of the six languages adds 24 keys for
-language-package status, button text colors, log pagination and the Email
-worker's message limit. Existing translations, language names and flags are
-preserved. CI validates packs against a downloaded 0.3.16 application, not just
+The **2026.10.27.1** packs include **4607 keys**, covering Simbioza **0.3.18**
+and its published modules, including Survey permissions and backup descriptions.
+Existing translations, legacy keys, language names and flags are preserved.
+CI also validates compatibility with the published 0.3.17 application, not just
 the catalogue hashes. Repository tags do not replace the independent pack revisions.
 
 This repository is the public catalogue of Simbioza interface translations. The
@@ -71,6 +70,10 @@ and review those keys in the corresponding pack, remove its pending file after
 review, validate, then publish a newer pack revision. Installed repository
 packs are refreshed during a later application update when their published
 digest changes; `vendor/bin/hph languages update` can refresh them sooner.
+
+If source keys have been removed, review them before synchronizing. Use
+`--retain-removed` only to preserve reviewed legacy translations needed by older
+supported installations; the tool lists every retained key.
 
 The manifest is data, not executable code. Every published pack must have a
 safe SVG flag, language names, all source keys, and intact placeholders.

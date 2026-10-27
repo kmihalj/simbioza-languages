@@ -7,6 +7,7 @@ declare(strict_types=1);
 $application = realpath($argv[1] ?? '');
 $repository = dirname(__DIR__);
 $version = '';
+$retainRemoved = in_array('--retain-removed', $argv, true);
 foreach ($argv as $argument) {
     if (str_starts_with($argument, '--version=')) {
         $version = substr($argument, 10);
@@ -14,7 +15,7 @@ foreach ($argv as $argument) {
 }
 if ($application === false || !is_file($application . '/vendor/autoload.php')
     || preg_match('/\A[0-9]{4}\.[0-9]{2}\.[0-9]{2}\.[0-9]+\z/D', $version) !== 1) {
-    fwrite(STDERR, "Usage: php scripts/sync.php /path/to/Simbioza --version=YYYY.MM.DD.N\n");
+    fwrite(STDERR, "Usage: php scripts/sync.php /path/to/Simbioza --version=YYYY.MM.DD.N [--retain-removed]\n");
     exit(2);
 }
 require $application . '/vendor/autoload.php';
@@ -216,6 +217,13 @@ foreach (['hr', 'en'] as $locale) {
     // EN: The hand-maintained catalogue wins when the same canonical key already exists.
     $newSources[$locale] = array_replace($metadataSources[$locale], $manager->catalog($locale));
     $removed = array_diff_key($oldSources[$locale], $newSources[$locale]);
+    // HR: Izričita opcija zadržava pregledane stare ključeve za podržane starije instalacije.
+    // EN: An explicit option retains reviewed legacy keys for supported older installations.
+    if ($retainRemoved && $removed !== []) {
+        fwrite(STDOUT, $locale . ': retaining legacy keys: ' . implode(', ', array_keys($removed)) . "\n");
+        $newSources[$locale] += $removed;
+        $removed = [];
+    }
     if ($removed !== []) {
         throw new RuntimeException('Source keys were removed or renamed; review before syncing: '
             . implode(', ', array_slice(array_keys($removed), 0, 10)));
