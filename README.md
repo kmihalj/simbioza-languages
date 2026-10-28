@@ -2,8 +2,8 @@
 
 [Croatian version](README_hr.md)
 
-The **2026.10.27.1** packs include **4607 keys**, covering Simbioza **0.3.18**
-and its published modules, including Survey permissions and backup descriptions.
+The **2026.10.28.2** pack sources include **4640 keys**, covering the modular
+installation profiles, standalone HTML guides, Survey permissions and backup descriptions.
 Existing translations, legacy keys, language names and flags are preserved.
 CI also validates compatibility with the published 0.3.17 application, not just
 the catalogue hashes. Repository tags do not replace the independent pack revisions.
