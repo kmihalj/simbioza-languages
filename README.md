@@ -2,7 +2,7 @@
 
 [Croatian version](README_hr.md)
 
-The **2026.10.28.2** pack sources include **4640 keys**, covering the modular
+The **2026.10.29.1** pack sources include **4697 keys**, covering the modular
 installation profiles, standalone HTML guides, Survey permissions and backup descriptions.
 Existing translations, legacy keys, language names and flags are preserved.
 CI also validates compatibility with the published 0.3.17 application, not just

@@ -2,7 +2,7 @@
 
 [Engleska verzija](README.md)
 
-Izvori paketa **2026.10.28.2** uključuju **4640 ključeva**, uključujući modularne
+Izvori paketa **2026.10.29.1** uključuju **4697 ključeva**, uključujući modularne
 profile instalacije, samostalne HTML upute, ovlasti anketa i opise sigurnosnih kopija.
 Postojeći prijevodi, stari ključevi, nazivi jezika i zastavice su očuvani. CI
 provjerava i kompatibilnost s objavljenom aplikacijom 0.3.17, ne samo sažetke
