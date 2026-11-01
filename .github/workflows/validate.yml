@@ -13,12 +13,13 @@ permissions:
 
 jobs:
   validate:
-    name: PHP ${{ matrix.php }}
+    name: PHP ${{ matrix.php }} / Simbioza ${{ matrix.application }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         php: ['8.2', '8.5']
+        application: ['0.3.17', '0.3.32']
 
     steps:
       - name: Check out catalogue
@@ -40,7 +41,13 @@ jobs:
         run: php scripts/validate_catalog.php
 
       - name: Verify compatibility with the published Simbioza baseline
+        env:
+          SOURCE_TAG: ${{ matrix.application }}
         run: |
-          git clone --quiet --depth 1 --branch 0.3.17 https://github.com/kmihalj/Simbioza.git "$RUNNER_TEMP/simbioza-language-source"
+          git clone --quiet --depth 1 --branch "$SOURCE_TAG" https://github.com/kmihalj/Simbioza.git "$RUNNER_TEMP/simbioza-language-source"
           composer --working-dir="$RUNNER_TEMP/simbioza-language-source" update --no-interaction --no-progress --prefer-dist
+          # EN: Include optional module keys as well as the application's base strings.
+          #
+          # HR: Uključi i ključeve opcionalnih modula, uz osnovne tekstove aplikacije.
+          php "$RUNNER_TEMP/simbioza-language-source/scripts/installation_packages.php" prepare
           php scripts/validate_source.php "$RUNNER_TEMP/simbioza-language-source"

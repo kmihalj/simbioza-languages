@@ -2,11 +2,13 @@
 
 [Engleska verzija](README.md)
 
-Izvori paketa **2026.10.29.1** uključuju **4697 ključeva**, uključujući modularne
-profile instalacije, samostalne HTML upute, ovlasti anketa i opise sigurnosnih kopija.
+Izvori paketa **2026.11.01.1** uključuju **4754 ključa**, uključujući modularne
+profile instalacije, samostalne HTML upute, ovlasti anketa, opise sigurnosnih kopija
+i postavke vlastitog sortiranja i paginacije tablica.
 Postojeći prijevodi, stari ključevi, nazivi jezika i zastavice su očuvani. CI
-provjerava i kompatibilnost s objavljenom aplikacijom 0.3.17, ne samo sažetke
-kataloga. Tagovi repozitorija ne zamjenjuju neovisne revizije jezičnih paketa.
+provjerava i kompatibilnost sa Simbiozom 0.3.17 i 0.3.32, uključujući ključeve
+opcionalnih modula, a ne samo sažetke kataloga. Tagovi repozitorija ne zamjenjuju
+neovisne revizije jezičnih paketa.
 
 Ovaj je repozitorij javni katalog prijevoda sučelja Simbioze. Aplikacija dolazi
 s hrvatskim (`hr`) i engleskim (`en`), a dodatni se jezici mogu instalirati iz

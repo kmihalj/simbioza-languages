@@ -2,11 +2,13 @@
 
 [Croatian version](README_hr.md)
 
-The **2026.10.29.1** pack sources include **4697 keys**, covering the modular
-installation profiles, standalone HTML guides, Survey permissions and backup descriptions.
+The **2026.11.01.1** pack sources include **4754 keys**, covering the modular
+installation profiles, standalone HTML guides, Survey permissions, backup descriptions,
+and the native table sorting and pagination settings.
 Existing translations, legacy keys, language names and flags are preserved.
-CI also validates compatibility with the published 0.3.17 application, not just
-the catalogue hashes. Repository tags do not replace the independent pack revisions.
+CI also validates compatibility with Simbioza 0.3.17 and 0.3.32, including optional
+module keys, not just catalogue hashes. Repository tags do not replace the independent
+pack revisions.
 
 This repository is the public catalogue of Simbioza interface translations. The
 application ships with Croatian (`hr`) and English (`en`); additional languages
