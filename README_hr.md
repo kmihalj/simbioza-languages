@@ -2,11 +2,12 @@
 
 [Engleska verzija](README.md)
 
-Izvori paketa **2026.11.01.1** uključuju **4754 ključa**, uključujući modularne
+Izvori paketa **2026.11.06.1** uključuju **4757 ključeva**, uključujući modularne
 profile instalacije, samostalne HTML upute, ovlasti anketa, opise sigurnosnih kopija
-i postavke vlastitog sortiranja i paginacije tablica.
+i postavke vlastitog sortiranja i paginacije tablica te napomene HTML editora za kartice,
+harmoniku i trenutačni datum kalendara.
 Postojeći prijevodi, stari ključevi, nazivi jezika i zastavice su očuvani. CI
-provjerava i kompatibilnost sa Simbiozom 0.3.17 i 0.3.32, uključujući ključeve
+provjerava i kompatibilnost sa Simbiozom 0.3.17, 0.3.32 i 0.3.39, uključujući ključeve
 opcionalnih modula, a ne samo sažetke kataloga. Tagovi repozitorija ne zamjenjuju
 neovisne revizije jezičnih paketa.
 
