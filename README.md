@@ -2,10 +2,12 @@
 
 [Croatian version](README_hr.md)
 
-The **2026.11.06.1** pack sources include **4757 keys**, covering the modular
+The **2026.11.07.1** pack sources include **4760 keys**, covering the modular
 installation profiles, standalone HTML guides, Survey permissions, backup descriptions,
 the native table sorting and pagination settings, and the HTML editor hints for
 tabs, accordions, and the current calendar date.
+This revision also translates the workspace-copy notice, the no-accent choice,
+and the distinction between inner-hero size and content overlap.
 Existing translations, legacy keys, language names and flags are preserved.
 CI also validates compatibility with Simbioza 0.3.17, 0.3.32, and 0.3.39, including optional
 module keys, not just catalogue hashes. Repository tags do not replace the independent
