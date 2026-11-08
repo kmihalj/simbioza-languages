@@ -1,15 +1,16 @@
 # Simbioza language packs
 
-[Croatian version](README_hr.md)
+[Croatian version](README_hr.md) · [Release 2026.11.08.1](docs/release-2026.11.08.1_en.md)
 
-The **2026.11.07.1** pack sources include **4760 keys**, covering the modular
+The **2026.11.08.1** pack sources include **4816 keys**, covering the modular
 installation profiles, standalone HTML guides, Survey permissions, backup descriptions,
 the native table sorting and pagination settings, and the HTML editor hints for
 tabs, accordions, and the current calendar date.
-This revision also translates the workspace-copy notice, the no-accent choice,
-and the distinction between inner-hero size and content overlap.
+This revision adds personal My work lists, current-permission explanations,
+Workspace search filters, and related account-menu labels in all six languages.
+It also retains the workspace-copy notice, no-accent choice and hero-layout controls.
 Existing translations, legacy keys, language names and flags are preserved.
-CI also validates compatibility with Simbioza 0.3.17, 0.3.32, and 0.3.39, including optional
+CI also validates compatibility with Simbioza 0.3.17, 0.3.32, and 0.3.44, including optional
 module keys, not just catalogue hashes. Repository tags do not replace the independent
 pack revisions.
 

@@ -1,15 +1,17 @@
 # Jezični paketi Simbioze
 
-[Engleska verzija](README.md)
+[Engleska verzija](README.md) · [Bilješke izdanja 2026.11.08.1](docs/release-2026.11.08.1_hr.md)
 
-Izvori paketa **2026.11.07.1** uključuju **4760 ključeva**, uključujući modularne
+Izvori paketa **2026.11.08.1** uključuju **4816 ključeva**, uključujući modularne
 profile instalacije, samostalne HTML upute, ovlasti anketa, opise sigurnosnih kopija
 i postavke vlastitog sortiranja i paginacije tablica te napomene HTML editora za kartice,
 harmoniku i trenutačni datum kalendara.
-Ova revizija prevodi i upozorenje pri kopiranju područja, izbor bez akcenta
-te razliku između veličine unutarnjeg hero elementa i preklapanja sadržaja.
+Ova revizija dodaje osobne popise Moj rad, objašnjenja važećih ovlasti,
+filtre pretraživanja područja i povezane nazive u osobnom izborniku na svih šest jezika.
+Zadržava i upozorenje pri kopiranju područja, izbor bez akcenta te razliku između
+veličine unutarnjeg hero elementa i preklapanja sadržaja.
 Postojeći prijevodi, stari ključevi, nazivi jezika i zastavice su očuvani. CI
-provjerava i kompatibilnost sa Simbiozom 0.3.17, 0.3.32 i 0.3.39, uključujući ključeve
+provjerava i kompatibilnost sa Simbiozom 0.3.17, 0.3.32 i 0.3.44, uključujući ključeve
 opcionalnih modula, a ne samo sažetke kataloga. Tagovi repozitorija ne zamjenjuju
 neovisne revizije jezičnih paketa.
 
